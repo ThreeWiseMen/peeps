@@ -10,4 +10,12 @@ class Person < ActiveRecord::Base
 
   has_many :skill_mappings
   has_many :skills, through: :skill_mappings
+
+  def proper_name
+    "#{last_name}, #{first_name}"
+  end
+
+  def full_name
+    "#{first_name}, #{last_name}"
+  end
 end

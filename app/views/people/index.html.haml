@@ -1,0 +1,12 @@
+%h2 People
+
+%table
+  %thead
+    %tr
+      %th name
+      %th actions
+  %tbody
+    - @people.each do |p|
+      %tr
+        %td= link_to p.proper_name, person_path(p)
+        %td

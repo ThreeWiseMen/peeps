@@ -1,0 +1,21 @@
+%h2= @person.full_name
+
+%h3 Skills
+
+%h4 Love
+
+%ul
+  - @person.skill_mappings.where(kind: :love).each do |sm|
+    %li= sm.skill.name
+
+%h4 Learn
+
+%ul
+  - @person.skill_mappings.where(kind: 'learn').each do |sm|
+    %li= sm.skill.name
+
+%h4 Loath
+
+%ul
+  - @person.skill_mappings.where(kind: :loath).each do |sm|
+    %li= sm.skill.name
