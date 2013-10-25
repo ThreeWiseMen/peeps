@@ -11,7 +11,7 @@
 %h4 Learn
 
 %ul
-  - @person.skill_mappings.where(kind: 'learn').each do |sm|
+  - @person.skill_mappings.where(kind: :learn).each do |sm|
     %li= sm.skill.name
 
 %h4 Loath
