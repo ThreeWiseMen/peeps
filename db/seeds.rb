@@ -14,3 +14,6 @@ justin = Person.create({first_name: 'Justin', last_name: 'Wood',
 
 cpp = Skill.create(name: 'C++')
 haskell = Skill.create(name: 'Haskell')
+
+SkillMapping.create(person: justin, skill: haskell, kind: :learn)
+SkillMapping.create(person: justin, skill: cpp, kind: :love)

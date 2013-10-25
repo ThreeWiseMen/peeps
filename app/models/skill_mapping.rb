@@ -3,7 +3,7 @@ class SkillMapping < ActiveRecord::Base
   belongs_to :person
   belongs_to :skill
 
-  def self.types
+  def self.kinds
     [
      :love,
      :learn,
@@ -11,6 +11,6 @@ class SkillMapping < ActiveRecord::Base
     ]
   end
 
-  validates :person, :skill, :type, presence: true
-  validates :type, inclusion: self.types
+  validates :person, :skill, :kind, presence: true
+  validates :kind, inclusion: self.kinds
 end
