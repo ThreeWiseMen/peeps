@@ -5,4 +5,6 @@ class Person < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   mount_uploader :avatar, AvatarUploader
+
+  validates :first_name, :last_name, presence: true
 end
