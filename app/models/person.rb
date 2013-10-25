@@ -7,4 +7,7 @@ class Person < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   validates :first_name, :last_name, presence: true
+
+  has_many :skill_mappings
+  has_many :skills, through: :skill_mappings
 end
