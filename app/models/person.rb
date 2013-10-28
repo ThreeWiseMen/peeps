@@ -10,6 +10,8 @@ class Person < ActiveRecord::Base
 
   has_many :skill_mappings
   has_many :skills, through: :skill_mappings
+  has_many :given_endorsements, class_name: Endorse.name, foreign_key: :endorsor_id
+  has_many :received_endorsements, class_name: Endorse.name, foreign_key: :endorsee_id
 
   def proper_name
     "#{last_name}, #{first_name}"
