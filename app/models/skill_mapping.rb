@@ -7,7 +7,7 @@ class SkillMapping < ActiveRecord::Base
     [
      :love,
      :learn,
-     :loath
+     :loathe
     ]
   end
 
