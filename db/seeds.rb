@@ -47,7 +47,7 @@ SkillMapping.create(person: justin, skill: cpp, kind: :love)
 SkillMapping.create(person: justin, skill: php, kind: :loathe)
 
 stacey = Person.create({first_name: 'Stacey', last_name: 'Vetzal',
-                        email: 'stacey@mojility.ca', password: 'something'})
+                        email: 'stacey@threewisemen.ca', password: 'something'})
 
 SkillMapping.create(person: stacey, skill: programming, kind: :love)
   SkillMapping.create(person: stacey, skill: cpp, kind: :love)

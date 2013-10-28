@@ -1,4 +1,6 @@
-%h2= @person.full_name
+%h2
+  %img{ src: gravatar_url(@person.email) }
+  = @person.full_name
 
 %h3 Skills
 
@@ -14,8 +16,8 @@
   - @person.skill_mappings.where(kind: :learn).each do |sm|
     %li= sm.skill.name
 
-%h4 Loath
+%h4 Loathe
 
 %ul
-  - @person.skill_mappings.where(kind: :loath).each do |sm|
+  - @person.skill_mappings.where(kind: :loathe).each do |sm|
     %li= sm.skill.name

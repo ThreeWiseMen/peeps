@@ -1,12 +1,7 @@
-%h2 People
+%h1 Meet The People
 
-%table
-  %thead
-    %tr
-      %th name
-      %th actions
-  %tbody
-    - @people.each do |p|
-      %tr
-        %td= link_to p.proper_name, person_path(p)
-        %td
+%ul.people
+  - @people.each do |p|
+    %li
+      %img{ src: gravatar_url(p.email) }
+      = link_to p.proper_name, person_path(p)
