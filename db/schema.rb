@@ -46,9 +46,4 @@ ActiveRecord::Schema.define(version: 20131025180714) do
     t.datetime "updated_at"
   end
 
-  create_table "user", force: true do |t|
-    t.string "ident",    limit: nil, null: false
-    t.string "password", limit: nil
-  end
-
 end
