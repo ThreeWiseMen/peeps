@@ -1,6 +1,8 @@
 Peeps::Application.routes.draw do
-#  devise_for :people
+  devise_for :people
   resources :people
   root to: "people#index"
-  resources :endorses, only: [:new, :create]
+
+  get '/endorse/:person_id/skill/:skill_id' => 'endorses#new', as: :new_endorse
+  post '/endorse' => 'endorses#create', as: :endorses
 end

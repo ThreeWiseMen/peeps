@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_filter :authenticate_person!
+  before_filter :authenticate_person!, except: [:index, :show]
 
   def index
     @people = Person.all

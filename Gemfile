@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'carrierwave'
 gem 'haml'
+gem 'formtastic'
 
 group :development, :test do
   gem 'rspec-rails'

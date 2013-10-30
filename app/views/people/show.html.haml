@@ -8,16 +8,22 @@
 
 %ul
   - @person.skill_mappings.where(kind: :love).each do |sm|
-    %li= sm.skill.name
+    %li
+      = sm.skill.name
+      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button
 
 %h4 Learn
 
 %ul
   - @person.skill_mappings.where(kind: :learn).each do |sm|
-    %li= sm.skill.name
+    %li
+      = sm.skill.name
+      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button
 
 %h4 Loathe
 
 %ul
   - @person.skill_mappings.where(kind: :loathe).each do |sm|
-    %li= sm.skill.name
+    %li
+      = sm.skill.name
+      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button

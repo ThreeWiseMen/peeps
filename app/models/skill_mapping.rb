@@ -2,6 +2,7 @@ class SkillMapping < ActiveRecord::Base
 
   belongs_to :person
   belongs_to :skill
+  has_many :endorses
 
   def self.kinds
     [

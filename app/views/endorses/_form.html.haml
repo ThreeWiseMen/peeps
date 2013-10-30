@@ -1,0 +1,11 @@
+You are about to endorse
+= endorse.endorsee.full_name
+for
+= endorse.skill_mapping.skill.name
+Please select a level you would like to give.
+
+= semantic_form_for endorse do |f|
+  = f.input :endorsee_id, as: :hidden
+  = f.input :skill_mapping_id, as: :hidden
+  = f.input :level
+  = f.submit
