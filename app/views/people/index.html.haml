@@ -3,5 +3,5 @@
 %ul.people
   - @people.each do |p|
     %li
-      %img{ src: gravatar_url(p.email) }
+      %img.avatar{ src: gravatar_url(p.email) }
       = link_to p.proper_name, person_path(p)

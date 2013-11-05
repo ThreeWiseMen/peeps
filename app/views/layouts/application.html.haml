@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title Peeps
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "http://use.typekit.net/bky7doc.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
+    = csrf_meta_tags
+  %body
+    = yield

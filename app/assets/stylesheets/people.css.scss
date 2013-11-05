@@ -8,6 +8,10 @@
   -webkit-border-radius: $radius;
 }
 
+img.avatar {
+  @include border-radius(8pt);
+}
+
 ul.people {
   li {
     margin: 8pt;
@@ -15,10 +19,21 @@ ul.people {
     background-color: #eee;
     float: left;
     @include border-radius(15pt);
-    img {
-      @include border-radius(8pt);
-    }
   }
 }
 
-
+div.person {
+  margin: 8pt;
+  padding: 15pt;
+  @include border-radius(20pt);
+  background-color: #eee;
+  div.desc {
+    margin: 8pt;
+    padding: 8pt 12pt;
+    @include border-radius(5pt);
+    background-color: #fff;
+    p:last-child {
+      margin: 0;
+    }
+  }
+}

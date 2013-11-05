@@ -1,29 +1,33 @@
-%h2
-  %img{ src: gravatar_url(@person.email) }
-  = @person.full_name
+%div.person
 
-%h3 Skills
+  %h2
+    %img.avatar{ src: gravatar_url(person.email) }
+    = person.full_name
 
-%h4 Love
+  %div.desc!= person.description
 
-%ul
-  - @person.skill_mappings.where(kind: :love).each do |sm|
-    %li
-      = sm.skill.name
-      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button
+  %h3 Skills
 
-%h4 Learn
+  %h4 Love
 
-%ul
-  - @person.skill_mappings.where(kind: :learn).each do |sm|
-    %li
-      = sm.skill.name
-      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button
+  %ul
+    - person.skill_mappings.where(kind: :love).each do |sm|
+      %li
+        = sm.skill.name
+        = link_to 'Endorse', new_endorse_path(person, sm), class: :button
 
-%h4 Loathe
+  %h4 Learn
 
-%ul
-  - @person.skill_mappings.where(kind: :loathe).each do |sm|
-    %li
-      = sm.skill.name
-      = link_to 'Endorse', new_endorse_path(@person, sm), class: :button
+  %ul
+    - person.skill_mappings.where(kind: :learn).each do |sm|
+      %li
+        = sm.skill.name
+        = link_to 'Endorse', new_endorse_path(person, sm), class: :button
+
+  %h4 Loathe
+
+  %ul
+    - person.skill_mappings.where(kind: :loathe).each do |sm|
+      %li
+        = sm.skill.name
+        = link_to 'Endorse', new_endorse_path(person, sm), class: :button
