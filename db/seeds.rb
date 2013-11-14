@@ -17,6 +17,7 @@ programming = Skill.create(name: 'Programming')
   cpp = Skill.create(parent: programming, name: 'C++')
   php = Skill.create(parent: programming, name: 'PHP')
   haskell = Skill.create(parent: programming, name: 'Haskell')
+  objectiveC = Skill.create(parent: programming, name: 'Objective-C')
   ruby = Skill.create(parent: programming, name: 'Ruby')
   java = Skill.create(parent: programming, name: 'Java')
   csharp = Skill.create(parent: programming, name: 'C#')
@@ -59,7 +60,7 @@ description = <<EOT
 EOT
 
 justin = Person.create({first_name: 'Justin', last_name: 'Wood',
-                        email: 'woodjk@threewisemen.ca', password: 'something',
+                        email: 'woodjk@commonscoop.com', password: 'something',
                         description: description})
 
 SkillMapping.create(person: justin, skill: haskell, kind: :learn)
@@ -85,7 +86,7 @@ description = <<EOT
 EOT
 
 stacey = Person.create({first_name: 'Stacey', last_name: 'Vetzal',
-                        email: 'stacey@threewisemen.ca', password: 'something',
+                        email: 'stacey@commonscoop.com', password: 'something',
                         description: description})
 
 SkillMapping.create(person: stacey, skill: programming, kind: :love)
@@ -95,3 +96,32 @@ SkillMapping.create(person: stacey, skill: programming, kind: :love)
   SkillMapping.create(person: stacey, skill: clojure, kind: :learn)
   SkillMapping.create(person: stacey, skill: java, kind: :loathe)
   SkillMapping.create(person: stacey, skill: csharp, kind: :loathe)
+
+
+description = <<EOT
+<p>
+  With over 20 years of professional experience in computing technologies, Stacey
+  has applied herself to hundreds of software projects at a variety of levels in
+  different industries. She saw the rise of the Design Patterns movement in the
+  ‘90s, eXtreme, Agile and Lean software development in the ’00s, and has been
+  running an advanced software development organization in Durham Region for the
+  past 12 years. She is the Executive Director of The Commons Cooperative, the
+  CEO of Mojility Inc. (formerly Three Wise Men Inc.), and sits on a variety of
+  boards and committees in Durham in a business and advisory capacity.
+</p>
+
+<p>
+  Stacey focuses on advanced development and project management skills, and is a
+  core visionary and thought leader within The Commons.
+</p>
+EOT
+
+shawn = Person.create({first_name: 'Shawn', last_name: 'Lee-Kwong',
+                        email: 'slk@commonscoop.com', password: 'something',
+                        description: description})
+
+SkillMapping.create(person: shawn, skill: programming, kind: :love)
+SkillMapping.create(person: shawn, skill: cpp, kind: :love)
+SkillMapping.create(person: shawn, skill: ruby, kind: :love)
+SkillMapping.create(person: shawn, skill: objectiveC, kind: :love)
+SkillMapping.create(person: shawn, skill: clojure, kind: :learn)
