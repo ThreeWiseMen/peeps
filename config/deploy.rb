@@ -3,7 +3,7 @@ require "rvm/capistrano"
 set :application, "peeps"
 
 set :use_sudo, false
-set :deploy_to, "~/#{application}"
+set :deploy_to, "/home/commons/#{application}"
 
 set :repository,  "git@github.com:ThreeWiseMen/peeps.git"
 set :scm, :git
