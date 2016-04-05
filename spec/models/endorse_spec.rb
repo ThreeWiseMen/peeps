@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: endorses
+#
+#  id               :integer          not null, primary key
+#  endorsee_id      :integer
+#  endorsor_id      :integer
+#  level            :integer
+#  created_at       :datetime
+#  updated_at       :datetime
+#  skill_mapping_id :integer
+#
+
 require 'spec_helper'
 
 describe Endorse do

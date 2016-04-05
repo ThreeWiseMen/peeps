@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: skill_mappings
+#
+#  id         :integer          not null, primary key
+#  skill_id   :integer
+#  person_id  :integer
+#  kind       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class SkillMapping < ActiveRecord::Base
 
   belongs_to :person
